@@ -1,113 +1,124 @@
 :root {
-    --color-fondo: #000000;
-    --color-texto: #F2F2F0;
-    --color-acento: #ffffff;
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
+  --color-fondo: #000000;
+  --color-texto: #F2F2F0;
+  --color-acento: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 2px solid var(--color-acento);
+  animation: fadeIn 1s ease-in;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--color-acento);
+}
+
+.section {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 1rem;
+  animation: fadeInUp 1s ease-in;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: var(--color-acento);
+  margin-bottom: 1rem;
+}
+
+.menu-item {
+  border: 1px solid var(--color-acento);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #111;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.02);
+}
+
+.menu-item span {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--color-acento);
+}
+
+a {
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
   body {
-    font-family: 'Cinzel', serif;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    line-height: 1.6;
-    padding: 1rem;
+    padding: 0.5rem;
   }
-  
-  header {
-    text-align: center;
-    padding: 2rem 1rem;
-    border-bottom: 2px solid var(--color-acento);
-    animation: fadeIn 1s ease-in;
-  }
-  
+
   header h1 {
-    font-size: 2.5rem;
-    color: var(--color-acento);
-  }
-  
-  .section {
-    margin: 2rem auto;
-    max-width: 800px;
-    padding: 1rem;
-    animation: fadeInUp 1s ease-in;
-  }
-  
-  .section h2 {
     font-size: 2rem;
-    color: var(--color-acento);
-    margin-bottom: 1rem;
   }
-  
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
   .menu-item {
-    border: 1px solid var(--color-acento);
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background-color: #111;
-    transition: transform 0.3s ease;
+    font-size: 0.95rem;
   }
-  
-  .menu-item:hover {
-    transform: scale(1.02);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .menu-item span {
-    display: block;
-    margin-top: 0.5rem;
-    font-weight: bold;
-    color: var(--color-acento);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  a {
-    color: var(--color-acento);
-    text-decoration: none;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    border-top: 1px solid #333;
-    margin-top: 3rem;
-  }
-  
-  @media (max-width: 600px) {
-    body {
-      padding: 0.5rem;
-    }
-  
-    header h1 {
-      font-size: 2rem;
-    }
-  
-    .section h2 {
-      font-size: 1.5rem;
-    }
-  
-    .menu-item {
-      font-size: 0.95rem;
-    }
-  }
-  
-  /* Animaciones */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+}
+body::before {
+  content: "";
+  background: url("src/img/BunFatherLogo.jpg") no-repeat center center;
+  background-size: contain;
+  opacity: 0.06; /* Ajusta para mayor o menor visibilidad */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
