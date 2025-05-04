@@ -61,6 +61,7 @@ header h1 {
   max-width: 800px;
   padding: 1rem;
   animation: fadeInUp 1s ease-in;
+
 }
 
 .section h2 {
@@ -68,6 +69,20 @@ header h1 {
   color: var(--color-acento);
   margin-bottom: 1rem;
 }
+
+#contacto {
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 1rem;
+  animation: fadeInUp 1s ease-in;
+
+}
+
+#contacto p {
+  text-align: center;
+}
+
 
 .menu-item {
   border: 1px solid var(--color-acento);
