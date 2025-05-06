@@ -214,3 +214,18 @@ body.about::before {
   transform: scale(1.2);
   color: #c81d25; 
 }
+
+.horarios {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.horarios li {
+  margin-bottom: 0.5rem;
+  background-color: #111;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-acento);
+  animation: fadeInUp 0.6s ease-in;
+}
