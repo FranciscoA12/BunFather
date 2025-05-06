@@ -196,3 +196,21 @@ body.about::before {
   background-size: 150px;
   opacity: 0.3;
 }
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  font-size: 3.8rem;
+  color: var(--color-acento);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #c81d25; 
+}
