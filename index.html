@@ -13,7 +13,7 @@
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html">Contacto</a>
     </nav>
     
     <div class="site-title">
@@ -29,31 +29,95 @@
   </section>
 
   <section id="menu" class="section">
-    <h2>Menú</h2>
-    <div class="menu-item">
+    <div class="menu-header">
+      <h2>Menú</h2>
+      <select id="categoria-menu">
+        <option value="todas">Todo</option>
+        <option value="hamburguesas">Hamburguesas</option>
+        <option value="postres">Postres</option>
+        <option value="addons">Add-ons</option>
+        <option value="combos">Combos</option>
+        <option value="bebidas">Bebidas</option>
+      </select>
+    </div>
+  <!-- Burgas -->
+    <div class="menu-item" data-categoria="hamburguesas">
       <h3>The Classic Don</h3>
-      <p>Carne de res, queso cheddar, lechuga, tomate y nuestra salsa especial.</p>
+      <p>Carne de res, queso cheddar, lechuga, tomate y salsa especial.</p>
       <span>L.180</span>
     </div>
-    <div class="menu-item">
-      <h3>The Big Boss BBQ</h3>
-      <p>Doble carne, cebolla caramelizada, tocino y queso suizo.</p>
-      <span>L.240</span>
+ 
+    <div class="menu-item" data-categoria="hamburguesas">
+        <h3>The Big Boss BBQ</h3>
+        <p>Doble carne, cebolla caramelizada, tocino y queso suizo.</p>
+        <span>L.240</span>
+      </div>
+    <div class="menu-item" data-categoria="hamburguesas">
+        <h3>The Hitman Heat</h3>
+        <p>Hamburguesa de garbanzos, aguacate y tomate asado.</p>
+        <span>L.200</span>
+      </div>
+    <div class="menu-item" data-categoria="hamburguesas">
+        <h3>La Sus Burga</h3>
+        <p>Jugosa, calientita y con los panes bien juntitos.</p>
+        <span>L.690</span>
     </div>
-    <div class="menu-item">
-      <h3>The Hitman Heat</h3>
-      <p>Hamburguesa de garbanzos, aguacate y tomate asado.</p>
-      <span>L.200</span>
+
+     <!-- Postres -->
+    <div class="menu-item" data-categoria="postres">
+      <h3>Sus Brownie</h3>
+      <p>Brownie de chocolate oscuro con helado de vainilla?.</p>
+      <span>L.90</span>
     </div>
-    <div class="menu-item">
-      <h3>La Sus Burga</h3>
-      <p>Jugosa, calientita y con los panes bien juntitos.</p>
-      <span>L.690</span>
+
+
+     <!-- Add-ons -->
+     <div class="menu-item" data-categoria="addons">
+      <h3>Susy Fries</h3>
+      <p>Papas con forma de sus.</p>
+      <span>L.69</span>
     </div>
+
+      <!-- Bebidas -->
+    <div class="menu-item" data-categoria="bebidas">
+      <h3>Susy Shake</h3>
+      <p>Malteada con sustancias de dudosa procedencia.</p>
+      <span>L.69</span>
+    </div>
+
+    <!-- Combos -->
+    <div class="menu-item" data-categoria="combos">
+      <h3>Impostor Combo</h3>
+      <p>SusBurga + Susy Fries + Sus Toy</p>
+      <span>L.69</span>
+    </div>
+
+
+
   </section>
+  
 
   <footer>
     <p>&copy; 2025 TheBunFather</p>
   </footer>
+
+  <!-- Script para filtrar el menu sus -->
+  <script>
+    const selectCategoria = document.getElementById('categoria-menu');
+    const items = document.querySelectorAll('.menu-item');
+  
+    selectCategoria.addEventListener('change', function () {
+      const categoria = this.value;
+  
+      items.forEach(item => {
+        if (categoria === 'todas' || item.dataset.categoria === categoria) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
+  
 </body>
 </html>

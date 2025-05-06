@@ -116,8 +116,6 @@ header h1 {
 }
 
 
-
-
 .menu-item span {
   display: block;
   margin-top: 0.5rem;
@@ -194,7 +192,7 @@ body.about::before {
   background-image: url("src/img/SusFather.png");
   background-position: bottom right;
   background-size: 150px;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .social-links {
@@ -229,3 +227,22 @@ body.about::before {
   border-left: 4px solid var(--color-acento);
   animation: fadeInUp 0.6s ease-in;
 }
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#categoria-menu {
+  background-color: #111;
+  color: var(--color-texto);
+  border: 1px solid var(--color-acento);
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+
