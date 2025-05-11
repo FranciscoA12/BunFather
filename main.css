@@ -210,7 +210,7 @@ body.about::before {
 
 .social-icon:hover {
   transform: scale(1.2);
-  color: #c81d25; 
+  color: #c81d25;
 }
 
 .horarios {
@@ -244,5 +244,43 @@ body.about::before {
   border-radius: 6px;
   font-family: inherit;
 }
+ 
+/* img */
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--color-acento);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #111;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.menu-item h3 {
+  color: var(--color-acento);
+  margin: 0.5rem 0;
+}
+
+.menu-item p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item span {
+  font-weight: bold;
+  color: var(--color-acento);
+}
+
 
 
